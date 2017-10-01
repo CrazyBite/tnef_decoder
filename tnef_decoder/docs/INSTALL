@@ -1,0 +1,84 @@
+Installing The TNEF Decoder Plugin
+==================================
+
+1) Start with untaring the file into the plugins directory.
+   Here is a example for the 1.0 version of the TNEF Decoder
+   plugin.
+
+  $ cd plugins
+  $ tar -zxvf tnef_decoder-1.0-1.4.0.tar.gz
+
+2) (OPTIONAL) Decide if you need to configure the plugin (in
+   most cases, you do not) and if so, if you want to store
+   the plugin configuration file in the plugin directory or
+   in the main SquirrelMail config directory.
+
+   ----- optional -----
+   A) To store the configuration file in the plugin directory,
+      change into the tnef_decoder directory and copy the
+      example configuration file to config.php and edit
+      config.php, making adjustments as you deem necessary.
+
+     $ cd tnef_decoder
+     $ cp config_example.php config.php
+     $ vi config.php
+
+   B) To store the configuration file in the main SquirrelMail
+      config directory, change into the tnef_decoder
+      directory and copy the example configuration file to
+      ../../config/config_tnef_decoder.php and edit
+      ../../config/config_tnef_decoder.php, making
+      adjustments as you deem necessary.
+
+     $ cd tnef_decoder
+     $ cp config_example.php ../../config/config_tnef_decoder.php
+     $ vi ../../config/config_tnef_decoder.php
+   ----- optional -----
+
+3) Then go to your config directory and run conf.pl.  Choose
+   option 8 and move the plugin from the "Available Plugins"
+   category to the "Installed Plugins" category.  Save and exit.
+
+  $ cd ../../config/
+  $ ./conf.pl
+
+4) Also, if not being used with SquirrelMail 1.4.10+ or 1.5.2+,
+   please verify that you have the "Compatibility" plugin
+   installed (but not necessarily activated).
+
+5) Translations are not included in this package.  To get a
+   translation, download the language pack needed from:
+
+      http://www.squirrelmail.org/download.php
+
+
+
+Upgrading The TNEF Decoder Plugin
+=================================
+
+1) Start with untaring the file into the plugins directory.
+   Here is a example for the 1.0 version of the TNEF Decoder
+   plugin.
+
+  $ cd plugins
+  $ tar -zxvf tnef_decoder-1.0-1.4.0.tar.gz
+
+2) (OPTIONAL) Only if you originally made any configuration
+   changes to the plugin, change into the tnef_decoder
+   directory and check your config.php file against the new
+   version to see if there are any new settings that you must
+   add to your config.php file.
+
+  $ diff -u config.php config_example.php
+
+   If you store your configuration file in the main SquirrelMail
+   config directory, adjust this command as follows:
+
+  $ diff -u ../../config/config_tnef_decoder.php config_example.php
+
+   Or simply replace your configuration file with the provided
+   example and reconfigure the plugin from scratch (see step two
+   under the installation procedure above).
+
+
+
